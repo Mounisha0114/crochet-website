@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
@@ -59,7 +59,8 @@ const collectionData = {
 };
 
 const CollectionPage = () => {
-  const { collection } = useParams<{ collection: string }>();
+  const location = useLocation();
+  const collection = location.pathname.substring(1); // Remove the leading slash
   const data = collection ? collectionData[collection as keyof typeof collectionData] : null;
 
   if (!data) {
