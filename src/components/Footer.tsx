@@ -92,11 +92,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-primary-foreground/80">
                 <Phone className="h-4 w-4 text-warm-gold" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 9848159639</span>
               </div>
               <div className="flex items-center gap-3 text-primary-foreground/80">
                 <MapPin className="h-4 w-4 text-warm-gold" />
-                <span>Handcraft Studio, Artisan Quarter</span>
+                <span>Sitaramapuram, Narsapur Mandal, W.G. Distt. Andhra Pradesh - 534280</span>
               </div>
             </div>
           </div>
