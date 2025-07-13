@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom crochet-themed colors
+				'warm-gold': 'hsl(var(--warm-gold))',
+				'warm-cream': 'hsl(var(--warm-cream))',
+				'soft-brown': 'hsl(var(--soft-brown))',
+				'neutral-light': 'hsl(var(--neutral-light))',
+				'text-muted': 'hsl(var(--text-muted))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +73,18 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-accent': 'var(--gradient-accent)',
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'warm': 'var(--shadow-warm)',
+			},
+			fontFamily: {
+				'serif': ['Playfair Display', 'serif'],
+				'sans': ['Inter', 'sans-serif'],
 			},
 			keyframes: {
 				'accordion-down': {
