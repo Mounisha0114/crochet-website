@@ -10,24 +10,6 @@ import tableclothImage from '@/assets/tablecloth-collection.jpg';
 import pillowcaseImage from '@/assets/pillowcase-collection.jpg';
 import totebagImage from '@/assets/totebag-collection.jpg';
 
-// Product images
-import blanketImage from '@/assets/crochet-blanket.jpg';
-import cardiganImage from '@/assets/crochet-cardigan.jpg';
-import tableclothProductImage from '@/assets/crochet-tablecloth.jpg';
-import pillowsImage from '@/assets/crochet-pillows.jpg';
-import totesImage from '@/assets/crochet-totes.jpg';
-
-const getProductImage = (collection: string) => {
-  switch (collection) {
-    case 'bedding': return blanketImage;
-    case 'garments': return cardiganImage;
-    case 'tablecloths': return tableclothProductImage;
-    case 'pillowcases': return pillowsImage;
-    case 'totebags': return totesImage;
-    default: return blanketImage;
-  }
-};
-
 const collectionData = {
   bedding: {
     title: 'Bedding Collection',
@@ -166,12 +148,8 @@ const CollectionPage = () => {
                   className="group hover:shadow-warm transition-all duration-500 transform hover:-translate-y-2 bg-card/80 backdrop-blur-sm border-border/50"
                 >
                   <CardContent className="p-6 text-center">
-                    <div className="w-24 h-24 mx-auto mb-6 rounded-lg overflow-hidden">
-                      <img 
-                        src={getProductImage(collection)} 
-                        alt={item}
-                        className="w-full h-full object-cover"
-                      />
+                    <div className="w-16 h-16 bg-warm-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Heart className="h-8 w-8 text-warm-gold" />
                     </div>
                     
                     <h3 className="font-serif text-xl font-semibold text-primary mb-4">
@@ -189,6 +167,41 @@ const CollectionPage = () => {
           </div>
         </section>
 
+        {/* Care Instructions */}
+        <section className="py-20 bg-gradient-hero">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="font-serif text-4xl font-bold text-primary mb-6">
+                Care Instructions
+              </h2>
+              <p className="text-lg text-muted-foreground mb-12">
+                To ensure your handcrafted pieces maintain their beauty and quality for years to come.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div className="bg-card/80 backdrop-blur-sm rounded-xl p-6 shadow-soft">
+                  <h3 className="font-semibold text-xl text-primary mb-4">Washing</h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>• Hand wash in cold water with mild detergent</li>
+                    <li>• Avoid bleach and harsh chemicals</li>
+                    <li>• Gently squeeze out excess water</li>
+                    <li>• Do not wring or twist the fabric</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-card/80 backdrop-blur-sm rounded-xl p-6 shadow-soft">
+                  <h3 className="font-semibold text-xl text-primary mb-4">Drying & Storage</h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>• Lay flat to dry away from direct sunlight</li>
+                    <li>• Reshape while damp to maintain form</li>
+                    <li>• Store in a cool, dry place</li>
+                    <li>• Fold carefully to avoid creasing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />
